@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/header"
+        android:scaleType="fitStart"
+        />
+
+    <TextView
+        android:id="@+id/f5-refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="F5-Refresh"
+        android:textColor="#021AEE"
+        android:textSize="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="15dp"
+        />
+
+    <TextView
+        android:id="@+id/cafe-IT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cafe and IT Soluation. We provide very friendly service."
+        android:layout_centerInParent="true"
+        android:layout_below="@id/header"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif"
+        />
+
+    <TextView
+        android:id="@+id/nofix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No fix no payment. That's how so easy."
+        android:layout_centerInParent="true"
+        android:layout_below="@id/cafe-IT"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif"
+        />
+
+    <ImageView
+        android:id="@+id/computer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/computer"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/nofix"
+        android:paddingTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/talktous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Have issues with your device talk to us b4 you messed up!!"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/computer"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif"
+        android:paddingTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address: Cork City, Ireland"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/talktous"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        />
+
+    <TextView
+        android:id="@+id/mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile: 086 1234567"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/address"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="15dp"
+        />
+
+    <TextView
+        android:id="@+id/facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Facebook: Visit us - F5-Refresh."
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/mobile"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="15dp"
+        />
+
+    <TextView
+        android:id="@+id/whatsup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WhatsUp: You'll find us on what'sUp."
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/facebook"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="15dp"
+        />
+
+    <TextView
+        android:id="@+id/open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We are open 7 days week. 9am - 5pm. Home service also available."
+        android:layout_centerInParent="true"
+        android:layout_below="@id/whatsup"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="5dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="5dp"
+        />
+
+    <ImageView
+        android:id="@+id/contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/contact"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/open"
+        />
+</RelativeLayout>
