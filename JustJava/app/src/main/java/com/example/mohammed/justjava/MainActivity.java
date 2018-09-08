@@ -25,8 +25,13 @@ public class MainActivity extends AppCompatActivity {
      * will update according the number of coffees here coffee price is 5 euro
      */
     public void submitOrder(View view) {
-        display(quantity);
-        displayPrice(quantity * 5);
+        /*display(quantity);
+        displayPrice(quantity * 5);*/
+        int price = quantity * 5;
+        String priceMessage = "Total : $" + price + "\nThank you!";
+        //priceMessage = priceMessage+ "\nThank you!"
+        displayMessage(priceMessage);
+
     }
 
     /**
@@ -65,5 +70,13 @@ public class MainActivity extends AppCompatActivity {
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
     }
 
+    /***
+     * This methos display the given text on the screen
+     * @param message
+     */
+    private void displayMessage(String message){
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        priceTextView.setText(message);
+    }
 
 }
