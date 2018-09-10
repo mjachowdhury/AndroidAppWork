@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
 import java.text.NumberFormat;
 
 /**
@@ -27,11 +28,67 @@ public class MainActivity extends AppCompatActivity {
     public void submitOrder(View view) {
         /*display(quantity);
         displayPrice(quantity * 5);*/
-        int price = quantity * 5;
-        String priceMessage = "Total : $" + price + "\nThank you!";
+        //int price = quantity * 5;
+        //String priceMessage = "Total : $" + price + "\nThank you!";
         //priceMessage = priceMessage+ "\nThank you!"
-        displayMessage(priceMessage);
 
+
+
+        int price = calculatePrice();
+       // String priceMessage = "Total : $" + price + "\nThank you!";
+
+        String result = createOrderSummary(price);
+        displayMessage(result);
+
+
+        //displayMessage(priceMessage);
+        //calculatePrice();
+    }
+
+    /**
+     * Calculate the price based on the quantity
+     * @param quantity
+     * @return
+     */
+    /*public void calculatePrice(int quantity){
+        int price = quantity * 5;
+        //return price;
+    }*/
+
+    /*public void calculatePrice(int quantity, int pricePerCup){
+        int price = quantity * pricePerCup;
+        //return price;
+    }*/
+
+    /**
+     * Calculate the total price
+     *
+     * @return total price
+     */
+    private int calculatePrice() {
+        int price = quantity * 5;
+        return price;
+    }
+
+    /**
+     * This method will display order summery
+     * @param name customer name
+     * @param coffeePrice coffe price per cup
+     * @return order summery
+     */
+    private String createOrderSummary(int coffeePrice){
+        String result = "Name : Mohammed" +
+                        "\nQuantity :" + quantity +
+                        "\nTotal $ :" +coffeePrice +
+                        "\nThank you!";
+        return result;
+
+        // another way to do this like
+        //String priceMessage = "Name : Mohammed";
+        //priceMessage = priceMessage + "Quantity :" + quantity;
+        //priceMessage = priceMessage + "Total: $" + coffeePrice;
+        //priceMessage = priceMessage + "\nThank you!";
+        //return priceMessage;
     }
 
     /**
@@ -63,9 +120,10 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This method display the given quantity price value on the screen
+     *
      * @param number
      */
-    private void displayPrice(int number){
+    private void displayPrice(int number) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
     }
@@ -74,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
      * This methos display the given text on the screen
      * @param message
      */
-    private void displayMessage(String message){
+    private void displayMessage(String message) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(message);
     }
