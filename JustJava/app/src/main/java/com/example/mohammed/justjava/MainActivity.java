@@ -57,8 +57,9 @@
                 //log message to check its working or not
                 //Log.v("MainActivity","Name: "+name);
 
+                //to calculate the price based on the topping
                 //to get the coffee price
-                int price = calculatePrice();
+                int price = calculatePrice(hasWhippedCream, hasChocolate);
                // String priceMessage = "Total : $" + price + "\nThank you!";
 
                 String result = createOrderSummary(name, price, hasWhippedCream,hasChocolate);
@@ -85,13 +86,24 @@
             }*/
 
             /**
-             * Calculate the total price
-             *
+             * Calculates the price of the order based on the topping
+             * @param addWhippedCream is whether or not user wants whipped cream o not
+             * @param addChocolate is whether or not user wants chocolate or not
              * @return total price
              */
-            private int calculatePrice() {
-                int price = quantity * 5;
-                return price;
+            private int calculatePrice(boolean addWhippedCream, boolean addChocolate) {
+                int baseCoffeePrice = 5; //price of the coffee per cup
+
+                //if user select adding whipped cream it will add 1 dolor
+                if (addWhippedCream){
+                    baseCoffeePrice = baseCoffeePrice + 1;
+                }
+                //if user select adding chocolate it will add 2 dolor
+                if (addChocolate){
+                   baseCoffeePrice =  baseCoffeePrice + 2;
+                }
+
+                return quantity * baseCoffeePrice;
             }
 
             /**
