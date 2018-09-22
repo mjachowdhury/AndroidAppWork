@@ -19,15 +19,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords"
-                    android:hint="Name:"
+                    android:hint="@string/name"
                      />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+
                     android:layout_marginTop="16dp"
-                    android:text="Toppings"
-                    android:textAllCaps="true" />
+                    android:text="@string/toppings"
+                    style="@style/HeaderTextStyle"
+                      />
 
                 <CheckBox
                     android:id="@+id/whippedCream_checkBox"
@@ -36,7 +36,7 @@
                     android:layout_marginBottom="16dp"
                     android:layout_marginTop="16dp"
                     android:paddingLeft="24dp"
-                    android:text="Whipped Cream"
+                    android:text="@string/whipped_cream"
                     android:textSize="16sp" />
 
                 <CheckBox
@@ -45,17 +45,17 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:paddingLeft="24dp"
-                    android:text="Chocolate"
+                    android:text="@string/chocolate"
                     android:textSize="16sp" />
 
 
                 <!-- this section for quantity text -->
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+
                     android:layout_marginBottom="16dp"
-                    android:text="Quantity"
-                    android:textAllCaps="true" />
+                    android:text="@string/quantity"
+                    style="@style/HeaderTextStyle"
+                      />
 
                 <!-- this is nested linearLayout-->
                 <LinearLayout
@@ -79,7 +79,7 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="8dp"
                         android:paddingRight="8dp"
-                        android:text="2"
+                        android:text="@string/initial_quantity_value"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -96,7 +96,9 @@
                 </LinearLayout>
 
 
+                <!--this two section do not need any more as it will sent to the email-->
                 <!-- this section for price text-->
+                <!--
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -105,7 +107,10 @@
                     android:textAllCaps="true"
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
+
+                    -->
                 <!-- this section for price display text-->
+                <!--
                 <TextView
                     android:id="@+id/order_summary_text_view"
                     android:layout_width="wrap_content"
@@ -115,6 +120,7 @@
                     android:textColor="@android:color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
+                    -->
 
                 <!-- this section for order button-->
                 <Button
@@ -122,7 +128,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:onClick="submitOrder"
-                    android:text="Order"
+                    android:text="@string/order"
                     android:textStyle="bold" />
 
             </LinearLayout>

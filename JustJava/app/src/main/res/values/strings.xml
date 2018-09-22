@@ -1,3 +1,73 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!--   XML file section -->
+    <!-- Title for the application-->
     <string name="app_name">Just Java</string>
+
+    <!-- Hint text dispaly in the fempty field for the user's name -->
+    <string name="name">Name</string>
+
+    <!-- header text fro the list of toppings [CHAR LIMIT=20] -->
+    <string name="toppings">Toppings</string>
+
+    <!-- header text for the list of toppings [CHAR LIMIT=20] -->
+    <string name="whipped_cream">Whipped Cream</string>
+
+    <!-- header text for the list of toppings [CHAR LIMIT=20] -->
+    <string name="chocolate">Chocolate</string>
+
+    <!-- header text for the Quantity [CHAR LIMIT=20] -->
+    <string name="quantity">Quantity</string>
+
+    <!-- Hint for order quantity-->
+    <string name="initial_quantity_value">2</string>
+
+    <!-- text for the Order [CHAR LIMIT=20] -->
+    <string name="order">Order</string>
+
+    <!--  Java Section MainActivity -->
+
+
+    <!--
+     Name for the order summary. It will be shown in the format of "Name: Amy where amy is the user's name.[CHAR LIMIT=NONE] -->
+
+    <string name="order_summery_name">Name: <xliff:g id="name" example="Amy">%s</xliff:g> </string>
+    <!--
+      Whipped cream topping for the order summary. It will be shown in the format of
+      "Add whipped cream? true" or "Add whipped cream? false". [CHAR LIMIT=NONE]
+    -->
+    <string name="order_summery_whipped_cream">Add Whipped Cream? <xliff:g id="addWhippedCream" example="True">%b</xliff:g> </string>
+
+    <!--
+      Whipped cream topping for the order summary. It will be shown in the format of
+      "Add chocolate? true" or "Add Chocolate? false". [CHAR LIMIT=NONE]
+    -->
+    <string name="order_summery_chocolate">Add Whipped Cream? <xliff:g id="addChocolate" example="True">%b</xliff:g> </string>
+
+    <!--
+      Quantity of coffee cups for the order summary. It will be shown in the format of
+      "Quantity: 2", where 2 is the number of cups ordered. [CHAR LIMIT=NONE]
+    -->
+    <string name="order_summary_quantity">Quantity: <xliff:g id="quantity" example="2">%d</xliff:g></string>
+
+    <!--
+      Total price for the order summary. It will be shown in the format of
+      "Total: $10" where $10 is the price. [CHAR LIMIT=NONE]
+    -->
+    <string name="order_summary_price">Total $: <xliff:g id="price" example="$10">%s</xliff:g></string>
+
+    <!-- if i put %d then in the MainActivity i do not have do Number format change -->
+    <!-- <string name="order_summary_price">Total $: <xliff:g id="price" example="$10">%d</xliff:g></string> -->
+
+
+    <!-- Thank you message for the order summery. [CHAR LIMIT=NONE] -->
+    <string name="thank_you">Thank you!</string>
+
+    <!--
+      Subject line for the order summary email. It will be in the format of
+      "Just Java order for Amy" where Amy is the user's name. [CHAR LIMIT=NONE]
+    -->
+    <string name="order_summary_email_subject">Just Java Order for <xliff:g id="name" example="Amy">%s</xliff:g></string>
+
+
 </resources>
